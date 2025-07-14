@@ -14,6 +14,12 @@ issues](https://img.shields.io/github/issues/monahton/GencoDymo2)](https://githu
 [![Platform](https://img.shields.io/badge/platform-all-green)](https://cran.r-project.org/)
 [![Website](https://img.shields.io/badge/docs-website-blue)](https://monahton.github.io/GencoDymo2/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15302316.svg)](https://doi.org/10.5281/zenodo.15302316)
+[![](https://www.r-pkg.org/badges/version/GencoDymo2?color=green)](https://cran.r-project.org/package=GencoDymo2)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/GencoDymo2?color=green)](https://cran.r-project.org/package=GencoDymo2)  
+[![name status
+badge](https://monahton.r-universe.dev/badges/:name)](https://monahton.r-universe.dev/)
+[![registry status
+badge](https://monahton.r-universe.dev/badges/:registry)](https://monahton.r-universe.dev/)
 
 [![Last
 commit](https://img.shields.io/github/last-commit/monahton/GencoDymo2)](https://github.com/monahton/GencoDymo2/commits/main)
@@ -40,17 +46,25 @@ research.
 
 ## 💻 Installation
 
-You can install the **development version** of `GencoDymo2` directly
-from GitHub:
+You can install the **stable version** of `GencoDymo2` from
+[CRAN](https://cran.r-project.org/package=GencoDymo2):
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("monahton/GencoDymo2")
+# Install the stable version from CRAN
+install.packages("GencoDymo2")
 ```
 
-Then load it into your R session:
+Or you can install the **development version** from GitHub for the
+latest features:
 
 ``` r
+#Install the development version from GitHub
+install.packages("pak")
+pak::pkg_install("monahton/GencoDymo2")
+```
+
+``` r
+# Load the package
 library(GencoDymo2)
 ```
 
@@ -65,7 +79,9 @@ vignette("GencoDymo2")
 ```
 
 Or visit the documentation website:  
-👉 <https://monahton.github.io/GencoDymo2/>
+👉 <https://monahton.github.io/GencoDymo2/>  
+👉
+<https://monahton.github.io/GencoDymo2/articles/GencoDymo2_vignette.html>
 
 ------------------------------------------------------------------------
 
