@@ -2,12 +2,12 @@
 #'
 #' @description Compares the number of annotated genomic elements (genes, transcripts, exons, introns) between two specified GENCODE releases. The function accepts input data as either file paths (in GTF/GFF format) or pre-loaded data frames. It computes the absolute difference (delta), the percentage change relative to a chosen baseline, and determines the direction of change (increase or decrease).
 #'
-#' @usage compare_release(input1, input2, type, gene_type = NULL, baseline = "count2")
+#' @usage compare_release(input1, input2, type, gene_biotype = NULL, baseline = "count2")
 #'
 #' @param input1 A character string specifying the file path to a GTF/GFF file from the first GENCODE release, or a data frame containing the annotation data.
 #' @param input2 A character string specifying the file path to a GTF/GFF file from the second GENCODE release, or a data frame containing the annotation data.
 #' @param type A character string indicating the type of genomic element to compare. Valid options are \code{"gene"}, \code{"transcript"}, \code{"exon"}, or \code{"intron"}.
-#' @param gene_type An optional character string specifying a particular gene biotype to filter comparisons (e.g., \code{"protein_coding"}, \code{"lncRNA"}). If \code{NULL} (default), all gene types are included.
+#' @param gene_biotype An optional character string specifying a particular gene biotype to filter comparisons (e.g., \code{"protein_coding"}, \code{"lncRNA"}). If \code{NULL} (default), all gene types are included.
 #' @param baseline A character string defining the baseline for calculating percentage change. Options include:
 #' \itemize{
 #'   \item \code{"count1"}: Uses the count from the first input (release) as the baseline.
@@ -24,7 +24,7 @@
 #' This function processes two GENCODE releases to compare annotation counts for a specified genomic element type. Key steps include:
 #' \enumerate{
 #'   \item Input Handling: If inputs are file paths, they are loaded into data frames using the \code{load_file} function. Data frames are used directly.
-#'   \item Element Filtering: If \code{gene_type} is specified, annotations are filtered to include only that gene biotype.
+#'   \item Element Filtering: If \code{gene_biotype} is specified, annotations are filtered to include only that gene biotype.
 #'   \item Count Calculation: The number of elements (genes, transcripts, etc.) of the specified type is counted in each release.
 #'   \item Delta and Percentage: The absolute difference (delta) and percentage change are calculated based on the chosen baseline.
 #'   \item Direction Determination: The direction of change is determined by comparing counts between the two releases.
@@ -43,7 +43,7 @@
 #' @seealso \code{\link{load_file}}, \code{\link{get_gtf}}, \code{\link{get_gff3}}.
 #' @export
 
-compare_release <- function(input1, input2, type, gene_type = NULL, baseline = "count2") {
+compare_release <- function(input1, input2, type, gene_biotype = NULL, baseline = "count2") {
   load_if_file <- function(input) {
     if (is.character(input) && file.exists(input)) {
       message("Loading data from file: ", input)
@@ -64,9 +64,9 @@ compare_release <- function(input1, input2, type, gene_type = NULL, baseline = "
   }
   df1 <- load_if_file(input1)
   df2 <- load_if_file(input2)
-  if (!is.null(gene_type)) {
-    df1 <- subset(df1, gene_type == gene_type)
-    df2 <- subset(df2, gene_type == gene_type)
+  if (!is.null(gene_biotype)) {
+    df1 <- subset(df1, gene_type == gene_biotype)
+    df2 <- subset(df2, gene_type == gene_biotype)
   }
   count_elements <- function(df, element_type) {
     return(nrow(subset(df, type == element_type)))

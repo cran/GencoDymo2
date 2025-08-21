@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2025-07-14" />
+<meta name="date" content="2025-08-21" />
 
 <title>GencoDymo2: Comprehensive Analysis of GENCODE Annotations and Splice Site Motifs</title>
 
@@ -1492,7 +1492,7 @@ Technopole, Viale Rita Levi-Montalcini 1, 20157 Milan, Italy<br>
 Technologies, 20054 Segrate, Italy<br> <sup>4</sup>Computational Biology
 Unit, Institute of Molecular Genetics Luigi Luca Cavalli-Sforza,
 National Research Council, 27100 Pavia,
-Italy<br><h4 class="date">2025-07-14</h4>
+Italy<br><h4 class="date">2025-08-21</h4>
 
 </div>
 
@@ -1678,8 +1678,8 @@ the majority of cases, the Ensembl gene ID of genes remains constant
 while the gene name might vary.<br />
 To quantify changes between two releases, use <span style="color:coral"><code>compare_release()</code></span>. Specify the
 two annotation data frames and the type of feature to compare (“gene”,
-“transcript”, “exon”, etc.). Additional filters like the gene_type and
-the baseline can allow to focus on subsets (e.g., only TEC or
+“transcript”, “exon”, etc.). Additional filters like the gene_biotype
+and the baseline can allow to focus on subsets (e.g., only TEC or
 protein_coding genes) and different reference counts for the calculation
 of the difference percentage.</p>
 <pre class="r"><code># Compare gene counts between release 47 and 46
@@ -1693,7 +1693,7 @@ comparison &lt;- compare_release(
   lnc_47_df,
   lnc_46_df,
   type = &quot;gene&quot;,
-  gene_type = &quot;TEC&quot;,
+  gene_biotype = &quot;TEC&quot;,
   baseline = &quot;count1&quot;
 )</code></pre>
 <p>The function produces as an output a <em><strong>Delta</strong></em>
@@ -1948,7 +1948,7 @@ this document.</p>
 ##  collate  C
 ##  ctype    English_United States.utf8
 ##  tz       Europe/Rome
-##  date     2025-07-14
+##  date     2025-08-21
 ##  pandoc   3.4 @ C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
 ##  quarto   NA @ C:\\PROGRA~1\\RStudio\\RESOUR~1\\app\\bin\\quarto\\bin\\quarto.exe
 ## 
@@ -1997,8 +1997,8 @@ this document.</p>
 ##  xtable        1.8-4   2019-04-21 [3] CRAN (R 4.5.0)
 ##  yaml          2.3.10  2024-07-26 [3] CRAN (R 4.5.0)
 ## 
-##  [1] C:/Users/monahton/AppData/Local/Temp/RtmpS4FR7H/Rinst1530634f4472
-##  [2] C:/Users/monahton/AppData/Local/Temp/RtmpaU0RLg/temp_libpath4a2c396b790a
+##  [1] C:/Users/monahton/AppData/Local/Temp/RtmpoLpweS/Rinst491064ca5a9d
+##  [2] C:/Users/monahton/AppData/Local/Temp/RtmpAlbOF6/temp_libpath3cb84e6d49c4
 ##  [3] C:/Users/monahton/AppData/Local/R/win-library/4.5
 ##  [4] C:/Program Files/R/R-4.5.1/library
 ## 

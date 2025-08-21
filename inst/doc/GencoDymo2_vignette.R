@@ -92,7 +92,7 @@ valid_annotation_types
 #   lnc_47_df,
 #   lnc_46_df,
 #   type = "gene",
-#   gene_type = "TEC",
+#   gene_biotype = "TEC",
 #   baseline = "count1"
 # )
 
