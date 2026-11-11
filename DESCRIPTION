@@ -2,7 +2,7 @@ Package: GencoDymo2
 Type: Package
 Title: Comprehensive Analysis of 'GENCODE' Annotations and Splice Site
         Motifs
-Version: 1.0.4
+Version: 1.0.5
 Authors@R: c(
     person("Monah", "Abou Alezz", email = "aboualezz.monah@hsr.it", role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0002-2006-4250")),
     person("Lorenzo", "Salviati", email = "lorenzo.salviati01@universitadipavia.it", role = "ctb"),
@@ -27,11 +27,11 @@ Suggests: devtools (>= 2.4.5), BSgenome.Hsapiens.UCSC.hg38 (>= 1.4.5),
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2026-01-12 08:12:47 UTC; monahton
+Packaged: 2026-11-11 18:01:25 UTC; monahton
 Author: Monah Abou Alezz [aut, cre, cph] (ORCID:
     <https://orcid.org/0000-0002-2006-4250>),
   Lorenzo Salviati [ctb],
   Roberta Alfieri [ctb],
   Silvia Bione [ctb]
 Repository: CRAN
-Date/Publication: 2026-01-12 13:50:17 UTC
+Date/Publication: 2026-11-11 18:50:02 UTC

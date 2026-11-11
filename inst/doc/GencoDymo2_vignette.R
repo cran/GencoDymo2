@@ -196,7 +196,7 @@ valid_annotation_types
 #   mouse_pri_36_granges,
 #   BSgenome.Mmusculus.UCSC.mm39,
 #   save_fasta = TRUE,
-#   output_file = file.path(tempdir(), "mouse_pri_36_CDS.fa.gz")
+#   output_file = file.path(tempdir(), "mouse_pri_36_CDS.fa.gz"),
 #   verbose = TRUE
 # )
 
